@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>SOC 10: Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="SOC 10: Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="SOC 10: Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="getting-started-with-computational-social-science.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> Getting Started with Computational Social Science</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#data-science-by-hand"><i class="fa fa-check"></i><b>1.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="1.3" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.3</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.4" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.5</b> Working in Base R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="online-text-as-data.html"><a href="online-text-as-data.html"><i class="fa fa-check"></i><b>2</b> Online Text As Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="online-text-as-data.html"><a href="online-text-as-data.html#including-plots"><i class="fa fa-check"></i><b>2.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#including-plots-1"><i class="fa fa-check"></i><b>3.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>4</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#including-plots-2"><i class="fa fa-check"></i><b>4.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>5</b> Networks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="networks.html"><a href="networks.html#including-plots-3"><i class="fa fa-check"></i><b>5.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-models.html"><a href="data-models.html"><i class="fa fa-check"></i><b>6</b> Data Models</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-models.html"><a href="data-models.html#including-plots-4"><i class="fa fa-check"></i><b>6.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html"><i class="fa fa-check"></i><b>7</b> Prediction, Machine Learning, and AI</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html#including-plots-5"><i class="fa fa-check"></i><b>7.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis, Topic Modelling</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html#including-plots-6"><i class="fa fa-check"></i><b>8.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Large Language Models</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html#including-plots-7"><i class="fa fa-check"></i><b>9.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="final-presentations.html"><a href="final-presentations.html"><i class="fa fa-check"></i><b>10</b> Final Presentations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="final-presentations.html"><a href="final-presentations.html#including-plots-8"><i class="fa fa-check"></i><b>10.1</b> Including Plots</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SOC 10: Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">SOC 10: Introduction to Computational Social Science</h1>
+<p class="author"><em>Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology</em></p>
+<p class="date"><em>Spring 2026 | Monday/Wednesday 10:30am-11:50am | Location</em></p>
+</div>
+<div id="syllabus" class="section level1 unnumbered hasAnchor">
+<h1>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Course Website:</strong> <a href="https://019c4986-0a09-80f6-7e06-7ec2816ab1fc.share.connect.posit.cloud/">https://019c4986-0a09-80f6-7e06-7ec2816ab1fc.share.connect.posit.cloud/</a>
+(Note: This is an example from a prior course).</p>
+<p><strong>Office Hours:</strong> Fridays, 11:00am-1:00pm <a href="https://calendly.com/tylermcdaniel/tyler-s-office-hours" class="uri">https://calendly.com/tylermcdaniel/tyler-s-office-hours</a></p>
+<p><strong>Course Description:</strong>
+Data science has rapidly gained recognition within the social sciences because it offers powerful new ways to ask questions about social systems and problems. This course will cover <em>sociological</em> approaches and applications of these data science tools. We will examine what cutting edge data analysis can tell us about human populations, urbanization, and social stratification; and how social forces shape the data that we have. This is a hands-on, interactive course. Students will follow along with workshop-style lectures by using and modifying the provided code in real time to analyze data and visualize results. Students will gain experience performing text analysis, working with spatial data, performing network analysis, and using machine learning to make predictions. The course will culminate in a computational social science project designed by the student or a team of up to four students.</p>
+<p><strong>Who is this course for?</strong>
+This course is primarily designed for people with no or very little exposure to programming for social science. While this course may be useful for programmers and computer scientists seeking social applications for their skills, the materials will mostly be introductory. This course is also for students who seek to develop a project related to data science and society. Over the course of ten weeks, students will have opportunities to pose questions and ideas, receive feedback, and collaborate with others on building out a complete research project. There are no prerequisites, other than a willingness to learn!</p>
+<p><strong>Learning Goals:</strong>
+At the end of the course, students will have experience using data science tools to address some major questions related to society. We will learn what questions can be addressed by data science and consider how we can effectively convey this information with the tools that we have. We will also think critically about power, inequality, and our role as data scientists in the twenty-first century.</p>
+<p><strong>Classroom policies:</strong>
+Please arrive on time and having completed the assigned materials. Being prepared to discuss the readings/videos/audio will enrich the learning experience of the entire class. Completing the assigned materials by Monday of each week will also allow students to identify areas of interest and consider possible research questions for problem sets or for the final project.</p>
+<ul>
+<li><p>Monday Class: <strong>Theory</strong>.
+This class will be <em>technology free</em>! Why? Data science has existed long before the modern era of computing capabilities. In fact, to refine their methodological approach, researchers in the modern age often practice on small data. So we will do the same.</p></li>
+<li><p>Wednesday Class: <strong>Laboratory</strong>.
+This class will focus on <em>coding</em>. Drawing from what we learned in the theory class, we will take out our laptops and devices, and try to do some (modern) data analysis ourselves. This class will be geared toward learning how to code in R. As with learning to code in any language, you can expect some amount of roadbumps/frustration. But we will work through this together!</p></li>
+</ul>
+<p><strong>Textbooks</strong>
+We will mostly use two textbooks for this course. The good news? Both are free, and online! (Though you are welcome to purchase either or both if you wish). For the rest of the Syllabus, I’ll refer to these by their titles alone.</p>
+<p><a href="https://www.bitbybitbook.com/en/1st-ed/preface/">Matthew J. Salganik. 2017. Princeton University Press. Bit By Bit: Social Research in the Digital Age.</a>
+This is probably the most complete book out there on doing data science for sociology (and other social sciences). The sections on data generation and research ethics are especially insightful, in my opinion.</p>
+<p><a href="https://socviz.co">Healy, Kieran. 2018. Princeton University Press. Data Visualization: A Practical Introduction.</a>
+This is an excellent guide to working with data. It is complete with exercises and data to use in R, and it provides a welcome reminder to think seriously about the aesthetic elements of data science.</p>
+<p><strong>Software</strong>
+This class will primarily be taught in R. Why? R is free, open access, built for and by data scientists, and has many wonderful and current packages for social scientists. You can download R <a href="https://www.r-project.org">here</a>. We will use R Studio as an interface, which can be downloaded for free <a href="https://posit.co/downloads/">here</a>. This being said, programming languages evolve and sometimes become defunct. The theoretical concepts that we cover in this class should be applicable to a range of data science programming tools. If you wish to use an alternative software, such as <a href="https://www.python.org">Python</a> or <a href="https://julialang.org">Julia</a>, or an alternative interface, such as <a href="https://jupyter.org">Jupyter Notebook</a>, I completely encourage this!</p>
+<p><strong>Assignments</strong></p>
+<ul>
+<li>Week 1 Problem Set <em>Due: Date</em></li>
+<li>Week 2 Problem Set <em>Due: Date</em></li>
+<li>Week 3 Problem Set <em>Due: Date</em></li>
+<li>Final Project Proposal <em>Due: Date</em></li>
+<li>Week 4 Problem Set <em>Due: Date</em></li>
+<li>Week 5 Problem Set <em>Due: Date</em></li>
+<li>Week 6 Problem Set <em>Due: Date</em></li>
+<li>Week 7 Problem Set <em>Due: Date</em></li>
+<li>Week 8 Problem Set <em>Due: Date</em></li>
+<li>Final Presentation <em>Due: Date</em></li>
+<li>Final Project <em>Due: Date</em></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>Final grades will be determined as follows:</p>
+<ul>
+<li>Participation: 15%</li>
+<li>Problem Sets: 50%</li>
+<li>Final Project: 35%</li>
+</ul>
+<p>Participation</p>
+<p>Coming to class prepared (having done any readings or assignments) is vital for participation.
+In class, students can participate in many ways. Engaging in class activities, working well with peers and in groups, and asking relevant questions during class are all valid forms of participation.</p>
+<p>Problem Sets</p>
+<p>There will be eight problem sets over the course of the quarter. Students are expected to complete each of these on time and turn in assignments on Canvas. Most of the assignments should be turned in as .PDF files generated by R Markdown or an alternative.</p>
+<p>Part of each Wednesday class will be devoted to answering questions about the problem set that is due the following Monday. Students with further questions, code bugs, and any other problems should come to office hours on Friday or schedule an appointment at another time.</p>
+<p>Final Project, Proposal, and Presentation</p>
+<p>The final project is intended to be an opportunity for students to apply some of the skills that we learn in this class toward a pressing and important issue. Much of this class is very introductory - we will go broad, but not deep - however, in the final project you can go deeper into one specific method or topic area.</p>
+<p>Students can work in groups of up to <em>four</em> for the final projects. Individual projects are also fine - but I encourage you to collaborate if you have the capacity! Much of the best science is now done in teams, so this type of work is an important skill to practice. As is the norm in science, teams should write details on specifically who contributed what to the project.</p>
+<p>The quarter goes by quickly, so students should begin thinking about potential final projects early. The project proposal is due at the same time as Problem Set 3, leaving roughly four more weeks for students to complete the project. The project proposal should include a potential research question, data source, and method. It is likely that you will want to use one or more methods that we haven’t covered yet in week 3 - this is ok! Provide as much detail as you can in your proposal. I will then provide comments on how to proceed.</p>
+<p><strong>Class Schedule and Reading List</strong></p>
+<p>Readings should be completed before class.</p>
+<p><u>Week 1: Getting Started with Computational Social Science</u></p>
+<p>We begin by exploring the meaning of ``Computational Social Science,” and how it relates to data science, and social science more broadly. This field has changed tremendously in the last few decades, so we’ll try to orient ourselves to its history and current directions. We will load R and R Studio onto our computers and start to explore these tools.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><a href="https://www.bitbybitbook.com/en/1st-ed/introduction/">Bit By Bit. 1: Introduction.</a></p></li>
+<li><p><a href="https://www.science.org/doi/10.1126/science.1167742">Lazer, David; Pentland, Alex; Adamic, Lada; et al. 2009. Science. Computational Social Science.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-121919-054621">Edelmann, Achim; Wolff, Tom; Montagne, Danielle; Bail, Christopher A. 2020. Annual Review of Sociology. Computational Social Science and Sociology.</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><p><a href="https://socviz.co/lookatdata.html#preface">Data Visualization: A Practical Introduction. Preface.</a></p></li>
+<li><p><a href="https://socviz.co/lookatdata.html#lookatdata">Data Visualization: A Practical Introduction. 1: Look at Data.</a></p></li>
+<li><p><a href="https://socviz.co/lookatdata.html#gettingstarted">Data Visualization: A Practical Introduction. 2: Get Started.</a></p></li>
+</ul>
+<p><u>Week 2: Using Online Text as Data</u></p>
+<p>For our first foray into data gathering, we will use online text. We will gather data from sources such as social media platforms and Google Trends. We will also start plotting these data.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><a href="https://www.bitbybitbook.com/en/1st-ed/observing-behavior/">Bit By Bit: Social Research in the Digital Age. Observing Behavor.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ssqu.12666">Public Attention to a Local Disaster Versus Competing Focusing Events: Google Trends Analysis Following the 2016 Louisiana Flood.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.tandfonline.com/doi/full/10.1080/14693062.2020.1870098">Marlow, Thomas; Miller, Sean; Roberts, J. Timmons. 2021. Climate Policy. Bots and online climate discourses: Twitter discourse on President Trump’s announcement of U.S. withdrawal from the Paris Agreement.</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><a href="https://socviz.co/lookatdata.html#makeplot">Data Visualization: A Practical Introduction. 3: Make a Plot.</a></li>
+</ul>
+<p><u>Week 3: Data Visualization Techniques</u></p>
+<p>Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of ``big data.”</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><a href="https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147">Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois’s Data Portraits : Visualizing Black America.</a></li>
+</ul>
+<p>*<em>Optional:</em> <a href="https://www-tandfonline-com.stanford.idm.oclc.org/doi/full/10.1080/09332480.2023.2179279#references-Section">Tackett, Maria; Çetinkaya-Rundel, Mine. 2023. Chance. Analyzing and Recreating Data Visualizations of W.E.B. Du Bois.</a></p>
+<ul>
+<li><em>Optional:</em> Try the <a href="https://edopportunity.org/opportunity/explorer/">Education Opportunity Explorer</a></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><p><a href="https://socviz.co/lookatdata.html#groupfacettx">Data Visualization: A Practical Introduction. 5: Show the Right Numbers.</a></p></li>
+<li><p><a href="https://socviz.co/lookatdata.html#workgeoms">Data Visualization: A Practical Introduction. 6: Graph Tables, Add Labels, Make Notes.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.nytimes.com/interactive/2023/05/22/climate/colorado-river-water.html">Shao, Elena. 2023. New York Times. The Colorado River is Shrinking. See What’s Using All the Water.</a></p></li>
+</ul>
+<p><u>Week 4: Maps and Spatial Data</u></p>
+<p>All data are located somewhere. In this week, we consider how to work with geographical information systems (GIS) and ways to communicate the spatial dimensions of our data. We will explore some tools for interactive spatial displays.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><em>Optional:</em> <a href="https://www.nature.com/articles/s41586-023-06757-3">Nilforoshan, Hamed; Looi, Wenli; Pierson, Emma; et al. 2023. Nature. Human mobility networks reveal increased segregation in large cities.</a></p></li>
+<li><p><em>Optional:</em> Explore the <a href="https://reglab.github.io/racialcovenants/static/maps/dotmap.html">Racial Covenant Map</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><a href="https://socviz.co/maps.html#maps">Data Visualization: A Practical Introduction. 7: Draw Maps.</a></li>
+</ul>
+<p><u>Week 5: Networks</u></p>
+<p>Sometimes, we wish to measure or display how observations are linked to each other. For instance, we might want to analyze a web of social interactions, or migration flows between many entities. In these times, network analysis is what we need. We will look at some applications of networks in sociology, and cover basic ways to visualize and analyze network data.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><em>Optional:</em> <a href="https://doi.org/10.1093/sf/soab036">Network Structure in Small Groups and Survival in
+Disasters</a></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><p><a href="https://www.nature.com/articles/nclimate2782">Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.</a></p></li>
+<li><p><a href="https://www.journals.uchicago.edu/doi/10.1086/653658">Wimmer, Andreas; Lewis, Kevin. 2010. American Journal of Sociology. Beyond and Below Racial Homophily: ERG Models of a Friendship Network Documented on Facebook.</a></p></li>
+</ul>
+<p><u>Week 6: Data Models</u></p>
+<p>Up to this point, we have mostly focused on <em>describing</em> our data. What if we want to say more about the <em>processes</em> unfolding? In this week, we look at data modelling. We will examine linear and non-linear models, their benefits, and some potential drawbacks.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><a href="https://journals.sagepub.com/doi/abs/10.1177/0003122414535774">Hwang, Jackelyn; Sampson, Robert. 2014. American Sociological Review. Divergent Pathways of Gentrification: Racial Inequality and the Social Order of Renewal in Chicago Neighborhoods.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://users.aalto.fi/~ave/ROS.pdf">Gelman, Andrew; Hill, Jennifer; Vehtari, Aki. 2020. Regression and Other Stories.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://sites.stat.columbia.edu/gelman/research/published/causalreview4.pdf">Gelman, Andrew. 2011. American Journal of Sociology. Causality and Statistical Learning.</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><a href="https://socviz.co/lookatdata.html#modelling">Data Visualization: A Practical Introduction. 6: Work With Models.</a></li>
+</ul>
+<p><u>Week 7: Prediction, Machine Learning, and AI</u></p>
+<p>It’s easy to understand things that have already happened, but what about future events? A new ``school” of data science, which has gained popularity in recent years, seeks not just to model relationships, but to <em>predict</em> outcomes. We’ll look at what this means for the social sciences.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><a href="https://www2.math.uu.se/~thulin/mm/breiman.pdf">Breiman, Leo. 2001. Statistical Science. The Two Cultures of Statistics.</a></p></li>
+<li><p><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041106">Molina, Mario; Garip, Feliz. 2019. Annual Review of Sociology. Machine Learning for Sociology.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://dho.stanford.edu/wp-content/uploads/Covenants.pdf">Surani, Faiz; Suzgun, Mirac; Raman, Vayoma; et al. 2025. AI for Scaling Legal Reform: Mapping and Redacting Racial Covenants in Santa Clara County.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://sociologicalscience.com/articles-v12-15-322/">Johnson, Rebecca A.; Zhang, Simone. 2015. Sociological Science. Predictive Algorithms and Perceptions of Fairness: Parent Attitudes Toward Algorithmic Resource Allocation in K-12 Education.</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><a href="https://www.science.org/doi/10.1126/science.aaf7894">Jean, Neal; Burke, Marshall; Xie, Michaelk; et al. 2016. Science. Combining satellite imagery and machine learning to predict poverty.</a></li>
+</ul>
+<p><u>Week 8: Text Analysis Tools, Part 1: Text Mining, Sentiment Analysis, Topic Modelling</u></p>
+<p>Text data contains multitudes of information, and can be leveraged to do some powerful things in these times. To gear up for an expidition into text analysis, we will start by learning about text mining.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ssqu.12669">Canales, Kristine L.; Pope, JoEllen V.; Maestas, Cherie D. 2019. Social Science Quarterly. Tweeting Blame in a Federalist System: Attributions for Disaster Response in Social Media Following Hurricane Sandy.</a></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><em>Optional:</em> <a href="https://www.edworkingpapers.com/sites/default/files/ai22-596.pdf">Baker, Dominique J., Karly Ford, Samantha Viano, and Marc Johnson-Guerrero. Racial Category Usage in Education Research:
+Examining the Publications from AERA Journals</a></li>
+</ul>
+<p><u>Week 9: Text Analysis Tools, Part 2: Large Language Models</u></p>
+<p>Last but not least, we will be ready to discuss large language models (LLMs) and what they mean for computational social science.</p>
+<p>Monday Reading (Date):</p>
+<ul>
+<li><p><a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-024-00986-7">Alvero, A.J.; Lee, J.; Regla-Vargas, A. et al. 2024. Journal of Big Data. Large language models, social demography, and hegemony: comparing authorship in human and synthetic text.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.pnas.org/doi/10.1073/pnas.1921526117">Wetts, Rachel. 2022. PNAS. In climate news, statements from large businesses and opponents of climate action receive heightened visibility.</a></p></li>
+</ul>
+<p>Wednesday Reading (Date):</p>
+<ul>
+<li><p><a href="https://benjaminmanning.io/files/rs.pdf">Manning, Benjamin; Zhu, Kehang; Horton, John. 2025. Automated Social Science: Language Models as Scientist and Subjects.</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2406.17972">Athey, Susan; Brunborg, Herman; Du, Tianyu; Kanodia, Ayush; Vafa, Keyon. 2025. LABOR-LLM: Language-Based Occupational Representations with Large Language Models.</a></p></li>
+</ul>
+<p><u>Week 10: Final presentations</u></p>
+<ul>
+<li>No readings this week! Just work on your projects and come prepared to watch your classmates present!</li>
+</ul>
+<p><strong>A note on accessibility</strong></p>
+<p>I want you to come to class. If you use a name or gender that is different from what is on the registrar, let me know and I will use what you prefer. If you may need academic accommodations based on the impact of a disability, you must initiate the request with the Office of Accessible Education (OAE). Professional staff will evaluate the request, review appropriate medical documentation, recommend reasonable accommodations, and prepare an Accommodation Letter for faculty. The letter will indicate how long it is to be in effect. Students should contact the OAE as soon as possible since timely notice is needed to coordinate accommodations. Students should also send your accommodation letter to instructors as soon as possible. The OAE is located at 563 Salvatierra Walk (phone: 723-1066, URL: <a href="http://oae.stanford.edu" class="uri">http://oae.stanford.edu</a>).</p>
+<p><strong>A note on late assignments:</strong>
+I recognize that unexpected events come up, and despite our best efforts, we sometimes miss deadlines. While it is important to keep up with the class assignments, it is possible to catch up with some additional effort.</p>
+<p>Therefore, everyone is granted <em>2 late assignments, no questions asked</em>. These can be turned in up to one week after the initial deadline with no penalty. Afterwards, or for the third late assignment, students will lose 30% of the maximum grade for each week that they are late.</p>
+<p>The purpose of this policy is to respect your privacy. You don’t need to disclose to me <em>why</em> an assignment is late, if you don’t want to. But in order for this policy to work well, it is vital that you only use these late assignments when you really need them. I highly, highly, encourage you to submit everything on time if you are able to.</p>
+<p>If you have any questions, or if a situation comes up where you foresee needing more than 2 late assignments, please come to office hours or reach out.</p>
+<p><strong>A note on Chat GPT:</strong>
+As you might be aware, the latest versions of <a href="https://chat.openai.com/auth/login">Chat GPT</a> have the capability to provide human-like intuition and reasoning, and to answer novel problems in interesting ways. These are incredibly powerful tools. These tools might <em>supplement</em> our learning, but they should never <em>replace</em> our learning.</p>
+<p>This class requires a lot of coding, problem-posing, and data interpreting. We might want to ask ChatGPT a question like, “how do you read a csv into R?” or “how can I add spaces to my R markdown document?” from time to time. I recommend going to sources like <a href="https://stackoverflow.com/">stackoverflow</a> first, but sometimes these are not super helpful. In these cases, using ChatGPT could quickly provide a useful answer. I consider this acceptable as long as you are responsible for knowing what the code that ChatGPT gives you is doing. If you submit this code as a homework, you should be able to explain it to the class.</p>
+<p>There are cases where usage of ChatGPT is not acceptable. Importantly, <em>it is never acceptable to simply plug in a homework question from this class and let ChatGPT come up with an answer</em>. I consider this a violation of Stanford’s Fundamental Standard. In general, if you would like to use ChatGPT make sure you are using it for the most specific aspect of a technical question possible (e.g. an edit to a line of code). Your written work should always be your own, and faking it <a href="https://techcrunch.com/2025/05/17/mit-disavows-doctoral-students-paper-on-ai-productivity-benefits/">is likely to catch up to you</a>.</p>
+<p><strong>A note on online teaching:</strong>
+While I plan for a smooth and seamless quarter, it is possible that there will be some disruptions to our ability to attend class together, either individually or at the collective level. To accommodate these, we may switch to a hybrid or online format for some classes.</p>
+<p>If you are sick and do not wish to get your classmates sick, that is great. It is possible that a hybrid option will be available, but I cannot guarantee this. Therefore, you are responsible for catching up on the work that you miss.</p>
+<p>If we move to an entirely online schedule for some classes, we will have to re-establish norms and policies for the Monday and Wednesday classes. If this is the case, assume that all deadlines will remain the same.</p>
+<p><strong>Additional Resources</strong></p>
+<p><a href="https://r4ds.had.co.nz/index.html">R for Data Science, Hadley Wickham &amp; Garrett Grolemund</a> This book is an excellent guide to using R for data science, written by the same person (Hadley Wickham) who wrote <code>dplyr</code> and many of the R functions that you will use in this class.</p>
+<p><a href="https://sicss.io/overview">SICSS Learning Materials</a>
+This is a wonderful trove of materials geared toward graduate students in the social sciences seeking to learn (or improve upon) their data skills. It is organized by Matthew Salganik (from Bit By Bit) and Chris Bail.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="getting-started-with-computational-social-science.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
