@@ -1,0 +1,21 @@
+# Data Models
+
+Up to this point, we have mostly focused on _describing_ our data. What if we want to say more about the _processes_ unfolding? In this week, we look at data modelling. We will examine linear and non-linear models, their benefits, and some potential drawbacks. 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r datamodels}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r datamodels2, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

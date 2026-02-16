@@ -1,0 +1,21 @@
+# Text Analysis Tools, Part I: Text Mining, Sentiment Analysis, Topic Modelling
+
+Text data contains multitudes of information, and can be leveraged to do some powerful things in these times. To gear up for an expidition into text analysis, we will start by learning about text mining. 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r textanalysis}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r parti, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,21 @@
+# Prediction, Machine Learning, and AI
+
+It's easy to understand things that have already happened, but what about future events? A new ``school" of data science, which has gained popularity in recent years, seeks not just to model relationships, but to _predict_ outcomes. We'll look at what this means for the social sciences. 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r prediction}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r machine, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

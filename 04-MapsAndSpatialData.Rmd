@@ -1,0 +1,21 @@
+# Maps and Spatial Data
+
+All data are located somewhere. In this week, we consider how to work with geographical information systems (GIS) and ways to communicate the spatial dimensions of our data. We will explore some tools for interactive spatial displays. 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r maps}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r spatialdata, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

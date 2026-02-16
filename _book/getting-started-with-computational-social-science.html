@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Getting Started with Computational Social Science | SOC 10: Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Getting Started with Computational Social Science | SOC 10: Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Getting Started with Computational Social Science | SOC 10: Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="online-text-as-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> Getting Started with Computational Social Science</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#data-science-by-hand"><i class="fa fa-check"></i><b>1.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="1.3" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.3</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.4" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="getting-started-with-computational-social-science.html"><a href="getting-started-with-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.5</b> Working in Base R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="online-text-as-data.html"><a href="online-text-as-data.html"><i class="fa fa-check"></i><b>2</b> Online Text As Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="online-text-as-data.html"><a href="online-text-as-data.html#including-plots"><i class="fa fa-check"></i><b>2.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#including-plots-1"><i class="fa fa-check"></i><b>3.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>4</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#including-plots-2"><i class="fa fa-check"></i><b>4.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>5</b> Networks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="networks.html"><a href="networks.html#including-plots-3"><i class="fa fa-check"></i><b>5.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-models.html"><a href="data-models.html"><i class="fa fa-check"></i><b>6</b> Data Models</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-models.html"><a href="data-models.html#including-plots-4"><i class="fa fa-check"></i><b>6.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html"><i class="fa fa-check"></i><b>7</b> Prediction, Machine Learning, and AI</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html#including-plots-5"><i class="fa fa-check"></i><b>7.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis, Topic Modelling</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html#including-plots-6"><i class="fa fa-check"></i><b>8.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Large Language Models</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html#including-plots-7"><i class="fa fa-check"></i><b>9.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="final-presentations.html"><a href="final-presentations.html"><i class="fa fa-check"></i><b>10</b> Final Presentations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="final-presentations.html"><a href="final-presentations.html#including-plots-8"><i class="fa fa-check"></i><b>10.1</b> Including Plots</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SOC 10: Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-started-with-computational-social-science" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Getting Started with Computational Social Science<a href="getting-started-with-computational-social-science.html#getting-started-with-computational-social-science" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We begin by exploring the meaning of ``Computational Social Science,” and how it relates to data science, and social science more broadly. This field has changed tremendously in the last few decades, so we’ll try to orient ourselves to its history and current directions. We will load R and R Studio onto our computers and start to explore these tools.</p>
+<div id="some-definitions" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Some Definitions<a href="getting-started-with-computational-social-science.html#some-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>What is social science? What is data science? Why combine these?</p>
+<p><strong>Social science</strong> typically refers to the disciplines that study social life (mainly anthropology, economics, political science, psychology, and sociology). This class focuses mostly on the <em>sociological</em> aspects of social science. In other words, we focus on the study of society.</p>
+<p><strong>Data science</strong> is essentially statistics. For our purposes, it is also the same as <a href="https://sicss.io/overview/introduction-to-computational-social-science">computational social science</a>. It is the study of working with data, whether these are counts or texts or any other form that can be captured by machines, usually with the purpose of drawing inferences and producing visualizations or other findings.</p>
+<p>This course provides an introduction to data science, from a sociological perspective, for a few reasons. First, there are massive challenges for societies everywhere, and it is important that we understand them. Second, data science skills are increasingly needed to communicate across fields and domains. Third, the tools from data science may actually help us to understand and communicate the variegated influences of changing societies across the globe.</p>
+</div>
+<div id="data-science-by-hand" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Data Science By Hand?<a href="getting-started-with-computational-social-science.html#data-science-by-hand" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To be a data scientist, one must learn to <em>think</em> like a data scientist. Thinking like a data scientist means considering what your data represent, and what you want to communicate with these data. The data can be millions and millions of observations, or just a few. They might be digital traces, survey results, or hand-written notes. Our goal is simply to look for the truth in our data, and to communicate this as clearly as possible.</p>
+<p>We begin with a classic example from statistics and epidemiology. John Snow, a London doctor, investigated an outbreak of cholera in London’s Soho district in 1954. By analyzing where deaths were occurring in relation to the town’s water sources, he was able to pinpoint the source of epidemic, and help the city end it. Below is a map of the city’s water sources at the time. The full map can be viewed <a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=16a719ed81524ef2ad86b57f6918712f">here</a>, and more information on the cholera outbreak can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7150208/">here</a>.</p>
+<p><img src="snow_cholera.gif" /><!-- --></p>
+<p>We next turn to another classic example of data visualization. The following graphic is a representation of Napoleon’s “March on Moscow” from 1812-1813. It was created in 1869 by Charles Minard, and it is one of the most popular data visualizations out there, even being called “<a href="https://www.datavis.ca/papers/jebs.pdf">the best graphic ever produced</a>” (you can decide whether you agree or not). <a href="https://www.edwardtufte.com/tufte/books_vdqi">Tufte</a> interprets the chart as an anti-war message, as it clearly shows the massive loss of lives during this campaign.</p>
+<p><img src="minard_lg.gif" /><!-- --></p>
+<p>Next, we consider a couple examples the sociologist W.E.B. Du Bois. The 1900 Paris Exhibition was a world fair that showcased humanity’s progress, challenges and possibilities at the turn of the millennium. A building was dedicated to issues of ``social economy.” Du Bois described his goal at this exhibition as follows:</p>
+<blockquote>
+<p>“In this exhibit there are, of course, the usual paraphenalia for catching the eye — photographs, models, industrial work, and pictures. But it does not stop here; beneath all this is a carefully thought-out plan, according to which the exhibitors have tried to show: (a) The history of the American Negro. (b) His present condition. (c) His education. (d) His literature.”</p>
+</blockquote>
+<p><font size = 2> – The American Negro at Paris. American Monthly Review of Reviews 22:5 (November 1900): 576. </font></p>
+<p>In the first, the geography of residence by race and class is shown for a McIntosh County in Georgia. This highlights the social station of Black residents outside the town of Daren, as well as their proximity to White residents. We can compare this to <a href="https://all-of-us.benschmidt.org/">demographic dot maps</a> from recent years.</p>
+<p><img src="dubois_mcintosh.jpg" /><!-- --></p>
+<p>The second image shows taxable property for Black Americans in an exceptionally creative way. This shows growth in assets between 1875-1890, with little change afterward.</p>
+<p><img src="dubois_taxable.jpg" /><!-- --></p>
+<p>Considering all these examples together, we notice that each data scientist had a distinct <strong>purpose</strong>. Snow sought to convey the relationship between water service and cholera deaths. Minard showed the casualties of war. Du Bois illustrated the conditions of Black Americans in the U.S. to the rest of the world. It’s useful to remember, no matter how complicated your data are, the best data scientists are often able to reduce this information to a simple message.</p>
+</div>
+<div id="getting-started-with-r-or-python" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Getting Started with R (or Python)<a href="getting-started-with-computational-social-science.html#getting-started-with-r-or-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can do some data science by hand, but statistical tools can help make our lives easier. Software such as R or Python are useful for efficiently analyzing cleaning data, analyzing data, and visualizing results. While you probably <em>could</em> make the plot of cherry blossom bloom times below by hand, it would take a <em>really</em> long time. Once you know R, you’ll be able to recreate this graph <a href="https://twitter.com/RobinRohwer/status/1639097356657512449?lang=ar">relatively easily</a>. (As a side note, notice what this image is conveying: the trend toward earlier and earlier cherry blossom blooms as the planet warms. More on this later.)</p>
+<p><img src="cherry_blossoms.jpg" /><!-- --></p>
+<p>You can install R <a href="https://cran.r-project.org/">here</a>. Just click on the appropriate link (Mac/Windows/Linux) and follow the instructions. Even if you’ve installed R previously, you may be able to update your version by re-installing it.</p>
+<p>Next, you’re going to want to install RStudio <a href="https://posit.co/download/rstudio-desktop/">here</a>. Again, you’ll have to select the right version for your machine. RStudio is the preferred integrated development environment (IDE) for most R users.</p>
+<p>We will focus most of this course on examples using R and RStudio, but there are other good alternatives for doing data science out there! I’ll just note a few</p>
+<p>In terms of programming, Python is an extremely popular and flexible option. It was designed and is used mostly by computer scientists, whereas R is mostly used by statisticians. The two languages therefore have lots of subtle differences in the way that one uses them, although, today it is possible to do most tasks in either. You can find instructions to see if your computer has Python installed (and download it if it does not) <a href="https://wiki.python.org/moin/BeginnersGuide/Download">here</a>.</p>
+<p>In terms of IDEs, Anaconda is commonly used with Python. You can install Anaconda <a href="https://docs.anaconda.com/free/anaconda/install/index.html">here</a>. Anaconda gives you the option to utilize many programs, including RStudio and Jupyter Notebooks, which are another great way to share code and analysis.</p>
+<p>Lastly, a relative <em>newcomer</em> in the social data science scene is a programming language called <a href="https://julialang.org/">Julia</a>. Currently, there seems to be a lot of enthusiasm about Julia due to its speed, intuitiveness, and the ability to incorporate other languages in Julia code as well. Julia allegedly combines the statistical prowess of R with the flexibility of Python. We won’t code in Julia in this class, but this is something to keep an eye on if you continue to do data science! <a href="https://www.youtube.com/watch?v=oTUmW8dWZws">This video</a> might be a good place to start if you want to learn more.</p>
+</div>
+<div id="opening-rstudio" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Opening RStudio<a href="getting-started-with-computational-social-science.html#opening-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you open RStudio, you’ll have the option to start a <strong>new project</strong>. I recommend creating a project just for this class. You’ll be asked to place the project in a directory (can be new or existing). I recommend putting it in a folder just for this class (e.g. C:/Users/tyler/Documents/Soc128D/).</p>
+<p>To start coding, you are going to want to create a new script. The script is essentially your instructions for what R should do. You can also run these directly in the command line (to the bottom of the screen with the &gt; symbol), but it’s better to run them from the script so that you can save and edit your commands.</p>
+<p>At the top of the script, create a header like the one below. This will help keep scripts organized as you make more of them. It’s also a good idea to save your script with a simple but descriptive name (e.g. “week1.R”). Notice all the <code>#</code> signs. These simply tell R that the text following them are notes rather than instructions. In a well-written script, there should be lots of <code>#</code> with notes explaining what the code is doing! The goal is to make it easy for your reader to understand.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="getting-started-with-computational-social-science.html#cb1-1" tabindex="-1"></a><span class="do">#####################################################</span></span>
+<span id="cb1-2"><a href="getting-started-with-computational-social-science.html#cb1-2" tabindex="-1"></a><span class="do">## title: a new R script!</span></span>
+<span id="cb1-3"><a href="getting-started-with-computational-social-science.html#cb1-3" tabindex="-1"></a><span class="do">## author: you!</span></span>
+<span id="cb1-4"><a href="getting-started-with-computational-social-science.html#cb1-4" tabindex="-1"></a><span class="do">## purpose: to try out R</span></span>
+<span id="cb1-5"><a href="getting-started-with-computational-social-science.html#cb1-5" tabindex="-1"></a><span class="do">## date: today&#39;s date</span></span>
+<span id="cb1-6"><a href="getting-started-with-computational-social-science.html#cb1-6" tabindex="-1"></a><span class="do">#####################################################</span></span>
+<span id="cb1-7"><a href="getting-started-with-computational-social-science.html#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="getting-started-with-computational-social-science.html#cb1-8" tabindex="-1"></a><span class="co"># you can start coding below</span></span></code></pre></div>
+</div>
+<div id="working-in-base-r" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Working in Base R<a href="getting-started-with-computational-social-science.html#working-in-base-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that you have your script open and a header written, it’s time to try some lines of code. We can begin with numbers and simple arithmetic. Notice that we use <code>*</code> for multiplication, and <code>/</code> for division.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started-with-computational-social-science.html#cb2-1" tabindex="-1"></a><span class="co"># what does R do with numbers?</span></span>
+<span id="cb2-2"><a href="getting-started-with-computational-social-science.html#cb2-2" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="getting-started-with-computational-social-science.html#cb4-1" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="getting-started-with-computational-social-science.html#cb6-1" tabindex="-1"></a><span class="co"># what if we try adding or multiplying?</span></span>
+<span id="cb6-2"><a href="getting-started-with-computational-social-science.html#cb6-2" tabindex="-1"></a><span class="dv">4</span><span class="sc">+</span><span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="getting-started-with-computational-social-science.html#cb8-1" tabindex="-1"></a><span class="dv">53</span><span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 106</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="getting-started-with-computational-social-science.html#cb10-1" tabindex="-1"></a><span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span></span></code></pre></div>
+<pre><code>## [1] 72</code></pre>
+<p>These cases all return a singular number, but sometimes we want series of numbers or characters. These are called arrays or vectors. We can make these by using <code>c()</code>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="getting-started-with-computational-social-science.html#cb12-1" tabindex="-1"></a><span class="co"># what if we put all the previous results together?</span></span>
+<span id="cb12-2"><a href="getting-started-with-computational-social-science.html#cb12-2" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">53</span><span class="sc">*</span><span class="dv">2</span>, <span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1]   2   3   7 106  72</code></pre>
+<p>In R, we can also assign values to labels. This will be useful as we begin to work with more and more data. To do so, we use <code>&lt;-</code>. This is a bit different than other languages, such as Python, which simply use <code>=</code>. For the most part, you can use <code>=</code> in R and it will not change your output, but there are a few cases where it could matter.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="getting-started-with-computational-social-science.html#cb14-1" tabindex="-1"></a><span class="co"># assign &quot;sum&quot; to the sum of a few numbers</span></span>
+<span id="cb14-2"><a href="getting-started-with-computational-social-science.html#cb14-2" tabindex="-1"></a>penguin <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">53</span><span class="sc">*</span><span class="dv">2</span>, <span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span>)</span>
+<span id="cb14-3"><a href="getting-started-with-computational-social-science.html#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="getting-started-with-computational-social-science.html#cb14-4" tabindex="-1"></a><span class="co"># now take a look at the result</span></span>
+<span id="cb14-5"><a href="getting-started-with-computational-social-science.html#cb14-5" tabindex="-1"></a>penguin</span></code></pre></div>
+<pre><code>## [1]   2   3   7 106  72</code></pre>
+<p>In the previous code, each output starts with a <code>[1]</code>. Why is this? It is to show that our output has one row. We could also represent these same data as a <span class="math inline">\(5 \cdot 1\)</span> matrix:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="getting-started-with-computational-social-science.html#cb16-1" tabindex="-1"></a><span class="co"># what if we put all the previous results together?</span></span>
+<span id="cb16-2"><a href="getting-started-with-computational-social-science.html#cb16-2" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">53</span><span class="sc">*</span><span class="dv">2</span>, <span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span>),</span>
+<span id="cb16-3"><a href="getting-started-with-computational-social-science.html#cb16-3" tabindex="-1"></a>       <span class="at">nrow =</span> <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>##      [,1]
+## [1,]    2
+## [2,]    3
+## [3,]    7
+## [4,]  106
+## [5,]   72</code></pre>
+<p>Another form that R handles are lists! We probably won’t use lists for a bit, but these can be helpful in cases where we have multiple vectors, especially if they are differing lengths.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="getting-started-with-computational-social-science.html#cb18-1" tabindex="-1"></a><span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span><span class="sc">+</span><span class="dv">3</span>),</span>
+<span id="cb18-2"><a href="getting-started-with-computational-social-science.html#cb18-2" tabindex="-1"></a>     <span class="dv">53</span><span class="sc">*</span><span class="dv">2</span>,</span>
+<span id="cb18-3"><a href="getting-started-with-computational-social-science.html#cb18-3" tabindex="-1"></a>     <span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 2 3 7
+## 
+## [[2]]
+## [1] 106
+## 
+## [[3]]
+## [1] 72</code></pre>
+<p>It is worth noting that all of the data that we have entered so far are <em>numeric</em>. Other common data types include <em>character</em>, <em>logical</em>, and <em>integer</em>. You can try manipulating your data with functions like <code>as.character()</code>. For instance, what happens when you run <code>as.logical(1)</code> and <code>as.logical(0)</code>?</p>
+<p>Another quick note here - if you are ever unsure of exactly what a function does, you can use the <code>?</code> command to access the help page. For instance, <code>?as.integer</code> tells us what arguments this function takes, and what output it will provide us with.</p>
+<p>Next, we’ll try using a <strong>function</strong>. You can think about a function as a recipe. If you were telling someone how to make pancakes, you could go through each step of mixing eggs, milk, flour, and so on, or you could just say “follow this recipe” and give them the entire list of instructions. R knows some recipes/functions already. If we want to sum all the components in a vector, we don’t have to tell R to do each step, we can just tell it to do the <code>sum()</code> function:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="getting-started-with-computational-social-science.html#cb20-1" tabindex="-1"></a><span class="co"># let&#39;s have R sum the numbers</span></span>
+<span id="cb20-2"><a href="getting-started-with-computational-social-science.html#cb20-2" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">53</span><span class="sc">*</span><span class="dv">2</span>, <span class="dv">90</span><span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">5</span>))</span></code></pre></div>
+<pre><code>## [1] 190</code></pre>
+<p>As an exercise, you can try writing your own function.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="getting-started-with-computational-social-science.html#cb22-1" tabindex="-1"></a><span class="co"># we&#39;ll call our function &#39;addition&#39;</span></span>
+<span id="cb22-2"><a href="getting-started-with-computational-social-science.html#cb22-2" tabindex="-1"></a>addition <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb22-3"><a href="getting-started-with-computational-social-science.html#cb22-3" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">+</span>y)</span>
+<span id="cb22-4"><a href="getting-started-with-computational-social-science.html#cb22-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>Let’s see if it worked:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="getting-started-with-computational-social-science.html#cb23-1" tabindex="-1"></a><span class="fu">addition</span>(<span class="dv">2</span>, <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>It worked! But why? When we assigned the action <code>x+y</code> to the function <code>addition</code>, we are telling R that given an <code>x</code> and a <code>y</code> inside <code>addition</code>’s parentheses, we want R to perform this task. Try writing a few functions on your own! The syntax is very important, so change this around a bit until you have an idea about what works and what doesn’t.</p>
+<p>Another important action that we can perform in R or any other coding language is the <strong>loop</strong>. Let’s say that we want R to perform an action repetitively, rather than just once. For example, maybe we want to print each of 10 numbers.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="getting-started-with-computational-social-science.html#cb25-1" tabindex="-1"></a><span class="co"># try printing each of the first 10 numbers</span></span>
+<span id="cb25-2"><a href="getting-started-with-computational-social-science.html#cb25-2" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb25-3"><a href="getting-started-with-computational-social-science.html#cb25-3" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb25-4"><a href="getting-started-with-computational-social-science.html#cb25-4" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<p>Using this example of a sequence from 1 to 10, we can observe what happens when we try to manipulate a vector.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="getting-started-with-computational-social-science.html#cb27-1" tabindex="-1"></a><span class="co"># vector with 1-10</span></span>
+<span id="cb27-2"><a href="getting-started-with-computational-social-science.html#cb27-2" tabindex="-1"></a>ten <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb27-3"><a href="getting-started-with-computational-social-science.html#cb27-3" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="getting-started-with-computational-social-science.html#cb27-4" tabindex="-1"></a><span class="co"># try adding one</span></span>
+<span id="cb27-5"><a href="getting-started-with-computational-social-science.html#cb27-5" tabindex="-1"></a>ten <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11</code></pre>
+<p>Finally, we’ll just take a brief look at using <strong>apply</strong>. Specifically, we look at <em>sapply</em>, which applies a function over a list or vector. In this case, we get the same result as above, so the <code>sapply</code> method actually makes our code a bit more complicated. But it’s a good idea to remember this option, because it will be useful as our functions get more complicated.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="getting-started-with-computational-social-science.html#cb29-1" tabindex="-1"></a><span class="co"># apply function that adds one to each integer from 1-10</span></span>
+<span id="cb29-2"><a href="getting-started-with-computational-social-science.html#cb29-2" tabindex="-1"></a><span class="fu">sapply</span>(ten, <span class="cf">function</span>(x) x <span class="sc">+</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11</code></pre>
+<p>A note on coding: when we learn to write code, we are learning a <em>language</em>! We will start by writing small bits, and there will be lots of moments when we don’t understand our computer (or it does not understand us, or both). This is all ok.</p>
+<p>What <em>is</em> important is that we clearly annotate our coding decisions so that our code can be legible to both humans and machines. So use the <code>#</code> sign often!!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="online-text-as-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
