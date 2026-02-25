@@ -22,7 +22,13 @@ Increasingly, social science, and data science more broadly, happens with _teams
 
 ## Version Controls
 
+We've all probably seen version controls or version history in our lives before. Tracked Changes in Microsoft Word or edits to Google Drive documents are examples. 
 
+
+__Git__ is a version control system. 
+
+
+__GitHub__ is a way to share your version history online with collaborators. 
 
 ## In Class Exercise
 

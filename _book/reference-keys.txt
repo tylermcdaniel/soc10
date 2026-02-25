@@ -42,3 +42,6 @@ problem-set-2
 why-visualization
 class-exercise
 problem-set-3
+lets-git-going-code-collaboration-and-version-controls
+collaborative-social-science
+version-controls
