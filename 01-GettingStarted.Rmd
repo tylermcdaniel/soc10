@@ -1,13 +1,25 @@
-# Getting Started with Computational Social Science
+# What is Computational Social Science?
 
 We begin by exploring the meaning of ``Computational Social Science," and how it relates to data science, and social science more broadly. This field has changed tremendously in the last few decades, so we'll try to orient ourselves to its history and current directions. We will load R and R Studio onto our computers and start to explore these tools. 
+
+__Readings:__
+
+* [Bit By Bit. 1: Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+
+* [Lazer, David; Pentland, Alex; Adamic, Lada; et al. 2009. Science. Computational Social Science.](https://www.science.org/doi/10.1126/science.1167742)
+
+* [Data Visualization: A Practical Introduction. Preface.](https://socviz.co/lookatdata.html#preface)
+
+* [Data Visualization: A Practical Introduction. 1: Look at Data.](https://socviz.co/lookatdata.html#lookatdata)
+
+* [Data Visualization: A Practical Introduction. 2: Get Started.](https://socviz.co/lookatdata.html#gettingstarted)
 
 
 ## Some Definitions
 
 What is social science? What is data science? Why combine these?
 
-**Social science** typically refers to the disciplines that study social life (mainly anthropology, economics, political science, psychology, and sociology). This class focuses mostly on the _sociological_ aspects of social science. In other words, we focus on the study of society. 
+**Social science** typically refers to the disciplines that study social life (mainly anthropology, economics, political science, psychology, and sociology). This class focuses mostly on the computational research and methods used by sociologists. However, many of these same theories and tools are useful across disciplines. 
 
 **Data science** is essentially statistics. For our purposes, it is also the same as [computational social science](https://sicss.io/overview/introduction-to-computational-social-science). It is the study of working with data, whether these are counts or texts or any other form that can be captured by machines, usually with the purpose of drawing inferences and producing visualizations or other findings.   
 
@@ -18,7 +30,7 @@ This course provides an introduction to data science, from a sociological perspe
 To be a data scientist, one must learn to _think_ like a data scientist. Thinking like a data scientist means considering what your data represent, and what you want to communicate with these data. The data can be millions and millions of observations, or just a few. They might be digital traces, survey results, or hand-written notes. Our goal is simply to look for the truth in our data, and to communicate this as clearly as possible. 
 
 
-We begin with a classic example from statistics and epidemiology. John Snow, a London doctor, investigated an outbreak of cholera in London's Soho district in 1954. By analyzing where deaths were occurring in relation to the town's water sources, he was able to pinpoint the source of epidemic, and help the city end it. Below is a map of the city's water sources at the time. The full map can be viewed [here](https://www.arcgis.com/apps/mapviewer/index.html?webmap=16a719ed81524ef2ad86b57f6918712f), and more information on the cholera outbreak can be found [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7150208/).
+We begin with a classic example from statistics and epidemiology. John Snow, a London doctor, investigated an outbreak of cholera in London's Soho district in 1954. By analyzing where deaths were occurring in relation to the town's water sources, he was able to pinpoint the source of epidemic, and help the city end it. Below is a map of the city's water sources at the time. A fuller map can be viewed [here](https://www.arcgis.com/apps/mapviewer/index.html?webmap=16a719ed81524ef2ad86b57f6918712f), and more information on the cholera outbreak can be found [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7150208/).
 
 ```{r cholera, echo=FALSE}
 knitr::include_graphics("snow_cholera.gif")
@@ -59,6 +71,20 @@ knitr::include_graphics("dubois_taxable.jpg")
 
 Considering all these examples together, we notice that each data scientist had a distinct **purpose**. Snow sought to convey the relationship between water service and cholera deaths. Minard showed the casualties of war. Du Bois illustrated the conditions of Black Americans in the U.S. to the rest of the world. It's useful to remember, no matter how complicated your data are, the best data scientists are often able to reduce this information to a simple message. 
 
+## In Class Exercise
+
+Now we can try doing some data science ourselves. To do so, _we will need some data_. We'll think about three things:
+
+1. The population of interest. 
+
+2. The outcome of interest. This is also known as the __estimand__. 
+
+3. How our data are measured. Are we able to fully observe the outcome among the entire population? If so, great! If not, it's not necessarily a problem, but we do need to think about what it might mean for our analyses.
+
+To make things simple, we'll first focus on ourselves as the population of interest. 
+
+
+
 ## Getting Started with R (or Python)
 
 We can do some data science by hand, but statistical tools can help make our lives easier. Software such as R or Python are useful for efficiently analyzing cleaning data, analyzing data, and visualizing results. While you probably _could_ make the plot of cherry blossom bloom times below by hand, it would take a _really_ long time. Once you know R, you'll be able to recreate this graph [relatively easily](https://twitter.com/RobinRohwer/status/1639097356657512449?lang=ar). (As a side note, notice what this image is conveying: the trend toward earlier and earlier cherry blossom blooms as the planet warms. More on this later.)
@@ -75,7 +101,7 @@ Next, you're going to want to install RStudio [here](https://posit.co/download/r
 
 We will focus most of this course on examples using R and RStudio, but there are other good alternatives for doing data science out there! I'll just note a few 
 
-In terms of programming, Python is an extremely popular and flexible option. It was designed and is used mostly by computer scientists, whereas R is mostly used by statisticians. The two languages therefore have lots of subtle differences in the way that one uses them, although, today it is possible to do most tasks in either. You can find instructions to see if your computer has Python installed (and download it if it does not) [here](https://wiki.python.org/moin/BeginnersGuide/Download).
+In terms of programming, Python is an extremely popular and flexible option. It was designed and is used mostly by computer scientists, whereas R is mostly used by statisticians. The two languages therefore have lots of subtle differences in the way that one uses them, although, today it is possible to do most tasks in either. You can find instructions to see if your computer has Python installed (and download it if it does not) [here](https://www.python.org/downloads/).
 
 In terms of IDEs, Anaconda is commonly used with Python. You can install Anaconda [here](https://docs.anaconda.com/free/anaconda/install/index.html). Anaconda gives you the option to utilize many programs, including RStudio and Jupyter Notebooks, which are another great way to share code and analysis. 
 
@@ -228,3 +254,84 @@ What _is_ important is that we clearly annotate our coding decisions so that our
 
 
 
+## Problem Set 1
+
+Due: April 7, 2026
+
+Recommended Resources: 
+
+[Installing R and RStudio](https://sicss.io/overview/installing-r-and-rstudio)
+
+[Getting Started with R Markdown](https://ourcodingclub.github.io/tutorials/rmarkdown/)
+
+[R Markdown Section from R for Data Science](https://r4ds.had.co.nz/r-markdown.html)
+
+A note: this homework will be a bit different than the other in that I will accept many forms of submission. Future assignments should be turned in as PDF or HTML files generated from R Markdown or Jupyter Notebook files. 
+
+Prior to beginning: Install R and RStudio on your computer. Open RStudio, start a new project, and start a new script called "HW1_yourname.R" or something similar. Give your script a heading like the following: 
+
+```{r header2}
+#####################################################
+## title: first problem set!
+## author: you!
+## purpose: to try out R
+## date: today's date
+#####################################################
+
+# you can start coding below
+
+```
+
+1. Add the following code to the script, and run it:
+
+```{r hwcode}
+
+vec <- c(1:20)
+
+```
+
+Try writing a function that multiplies each number in `vec` by 2. Label this as a new vector. You can display the output with `print()` (add the name of your output vector in the parentheses). 
+
+2. Let's put the two vectors together in a dataframe! For this, you are going to want to install and library the `dplyr` package. You can use the `bind_cols()` function to combine the two vectors. Then print the dataframe!
+
+
+```{r answer, echo = FALSE, message = FALSE}
+library(dplyr)
+
+mult_2 <- function(x){
+  new_x <- x*2
+  
+  return(new_x)
+}
+
+# create new vec
+new_vec <- mult_2(vec)
+
+# put in dataframe
+df <- bind_cols(vec, new_vec)
+
+```
+
+3. Now, name the two columns in the dataframe `x` and `y`, and create a plot using the data! You can try the following first:
+
+```{r plotexample}
+
+# plot your dataframe 
+# note that you will have to define df
+# in this case, df is the binded columns of vec and vec multiplied by 2
+
+names(df) <- c("x", "y")
+
+plot(df$x, df$y)
+
+```
+
+Next, can you use `ggplot()` from the `ggplot2` package to make a more beautiful plot?
+
+
+4. Read the temperature data from canvas (temps.csv) into your R session using the `read_csv()` function from the `readr` package. Can you produce a plot like the one from section \@ref(a-climate-example)? Can you make the plot more interesting in any ways?
+
+
+5. Discuss the importance of your plot using some frameworks for understanding climate change (e.g. environmental justice). The week 1 readings may be helpful for this question. Note that there are two ways to submit this answer: 
++ First, you could submit the other answers as an R script, and submit this answer as a word document. But this is a bit clunky and requires me to run your R script to see your results. (I will still accept this format for this week, but not for future homeworks!)
++ Second, you can *combine* script, output, and written responses using [R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). Remember that our main task as data scientists will be to communicate effectively, so this option is much preferred!! I recognize that getting started with R Markdown can take a lot of effort, so please be patient with yourself, and reach out to myself or your classmates if you are stuck.  

@@ -32,3 +32,13 @@ getting-started-with-r-or-python
 opening-rstudio
 working-in-base-r
 data-visualization-techniques
+what-is-computational-social-science
+in-class-exercise
+problem-set-1
+gitting-started-code-version-controls-and-collaboration
+social-science
+in-class-exercise-1
+problem-set-2
+why-visualization
+class-exercise
+problem-set-3

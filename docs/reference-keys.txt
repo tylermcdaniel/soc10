@@ -22,3 +22,13 @@ text-analysis-tools-part-2-large-language-models
 including-plots-7
 final-presentations
 including-plots-8
+in-class-exercise
+problem-set-1
+what-is-computational-social-science
+lets-git-started-version-controls-and-collaboration-in-computational-social-science
+in-class-exercise-1
+gitting-started-code-version-controls-and-collaboration
+social-science
+why-visualization
+class-exercise
+problem-set

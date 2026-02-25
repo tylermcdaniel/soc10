@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Data Visualization Techniques | Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Data Visualization Techniques | Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/soc10" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Data Visualization Techniques | Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="gitting-started-code-version-controls-and-collaboration.html"/>
+<link rel="next" href="maps-and-spatial-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#data-science-by-hand"><i class="fa fa-check"></i><b>1.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#in-class-exercise"><i class="fa fa-check"></i><b>1.3</b> In Class Exercise</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.4</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.5</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.6</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="gitting-started-code-version-controls-and-collaboration.html"><a href="gitting-started-code-version-controls-and-collaboration.html"><i class="fa fa-check"></i><b>2</b> “Gitting” Started: Code, Version Controls and Collaboration</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="gitting-started-code-version-controls-and-collaboration.html"><a href="gitting-started-code-version-controls-and-collaboration.html#social-science"><i class="fa fa-check"></i><b>2.1</b> Social Science</a></li>
+<li class="chapter" data-level="2.2" data-path="gitting-started-code-version-controls-and-collaboration.html"><a href="gitting-started-code-version-controls-and-collaboration.html#in-class-exercise-1"><i class="fa fa-check"></i><b>2.2</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.3" data-path="gitting-started-code-version-controls-and-collaboration.html"><a href="gitting-started-code-version-controls-and-collaboration.html#online-text-as-data"><i class="fa fa-check"></i><b>2.3</b> Online Text As Data</a></li>
+<li class="chapter" data-level="2.4" data-path="gitting-started-code-version-controls-and-collaboration.html"><a href="gitting-started-code-version-controls-and-collaboration.html#problem-set-2"><i class="fa fa-check"></i><b>2.4</b> Problem Set 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#class-exercise"><i class="fa fa-check"></i><b>3.2</b> Class Exercise</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.3</b> Problem Set 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>4</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#including-plots"><i class="fa fa-check"></i><b>4.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>5</b> Networks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="networks.html"><a href="networks.html#including-plots-1"><i class="fa fa-check"></i><b>5.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-models.html"><a href="data-models.html"><i class="fa fa-check"></i><b>6</b> Data Models</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-models.html"><a href="data-models.html#including-plots-2"><i class="fa fa-check"></i><b>6.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html"><i class="fa fa-check"></i><b>7</b> Prediction, Machine Learning, and AI</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-machine-learning-and-ai.html"><a href="prediction-machine-learning-and-ai.html#including-plots-3"><i class="fa fa-check"></i><b>7.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis, Topic Modelling</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis-topic-modelling.html#including-plots-4"><i class="fa fa-check"></i><b>8.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Large Language Models</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-large-language-models.html"><a href="text-analysis-tools-part-2-large-language-models.html#including-plots-5"><i class="fa fa-check"></i><b>9.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="final-presentations.html"><a href="final-presentations.html"><i class="fa fa-check"></i><b>10</b> Final Presentations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="final-presentations.html"><a href="final-presentations.html#including-plots-6"><i class="fa fa-check"></i><b>10.1</b> Including Plots</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-visualization-techniques" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Data Visualization Techniques<a href="data-visualization-techniques.html#data-visualization-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of ``big data.”</p>
+<p><strong>Readings:</strong></p>
+<ul>
+<li><p><a href="https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147">Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois’s Data Portraits : Visualizing Black America.</a></p></li>
+<li><p><a href="https://socviz.co/lookatdata.html#groupfacettx">Data Visualization: A Practical Introduction. 5: Show the Right Numbers.</a></p></li>
+<li><p><a href="https://socviz.co/lookatdata.html#workgeoms">Data Visualization: A Practical Introduction. 6: Graph Tables, Add Labels, Make Notes.</a></p></li>
+</ul>
+<div id="why-visualization" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Why Visualization?<a href="data-visualization-techniques.html#why-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We look at data for a reason. A well-designed visualization can make it easy to see important patterns and trends that might not pop out in tables. Visualization is also a good way to explore our data, or to look for potential issues or mistakes.</p>
+<p>W.E.B. Du Bois is credited with some of the most famous visualizations in the field of sociology. With researchers at Atlanta University, Du Bois communicated the state of Black Americans to the world at the 1906 Paris Exhibition through a series of graphs documenting racial the economic, social, and demogrpahic conditions of Black citizens. The purpose behind these plots made them impactful. But the artistic elements make them unforgettable.</p>
+</div>
+<div id="class-exercise" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Class Exercise<a href="data-visualization-techniques.html#class-exercise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this excercise, we are going to create our own visualizations using historical census data. In groups, answer the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>What are three ways that you could display the data? Describe the benefits and drawbacks of each.</p></li>
+<li><p>How will you display the data? What display elements will you add?</p></li>
+<li><p>Sketch your data visualization. Be creative!</p></li>
+</ol>
+</div>
+<div id="problem-set-3" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Problem Set 3<a href="data-visualization-techniques.html#problem-set-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Returning to the historical census data, re-create one of the visualizations from your classmates <a href="">you can find them here</a>. (You won’t be penalized for not being able to fully replicate a chart).</p></li>
+<li><p>What would you change in the visualization? Why? Modify and re-plot.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="gitting-started-code-version-controls-and-collaboration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="maps-and-spatial-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

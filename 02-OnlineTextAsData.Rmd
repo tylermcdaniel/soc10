@@ -1,21 +1,51 @@
-# Online Text As Data
+# Let's "Git" Going: Code, Collaboration, and Version Controls
+
+This week, we'll jump into a workflow for computational social science. Before we dive into analyses, we'll think about some good practices for doing research. While these might seem cumbersome or clunky initially, they will help us collaborate with others, fix our own mistakes, and save us time and energy down the road. 
+
+__Readings:__ 
+
+* [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/)
+
+* [Bit By Bit: Social Research in the Digital Age. Observing Behavor.](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
+
+* [Data Visualization: A Practical Introduction. 3: Make a Plot.](https://socviz.co/lookatdata.html#makeplot)
+
+
+## Social Science
+
+
+
+## Collaborative Social Science
+
+Increasingly, social science, and data science more broadly, happens with _teams of researchers_. For example, [this paper](https://www.pnas.org/doi/full/10.1073/pnas.1915006117) has 112 authors! When working with a team of researchers, it becomes more important to organize the research process, such that each team member has the correct version of data, can share their updates efficiently, and can undo changes or access different versions of files when necessary.
+
+
+## Version Controls
+
+
+
+## In Class Exercise
+
+Consider the following situation: your team is using the _data_ we developed last week to investigate an _outcome of interest_. However, time is limited, and you want to maximize efficiency in this collaboration. 
+
+1. What are the potential problems/inefficiencies that could arise with this collaboration? Create your own categorization of _all_ the possible problems. 
+
+2. How could these be addressed? Develop at least three strategies that would limit or eliminate issues.
+
+3. Choose your preferred solution, and sketch a flowchart for how it would work. 
+
+
+
+## Online Text As Data
 
 For our first foray into data gathering, we will use online text. We will gather data from sources such as social media platforms and Google Trends. We will also start plotting these data. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r online}
-summary(cars)
-```
+## Problem Set 2
 
-## Including Plots
+1. On GitHub, __fork__ the assignment called "Problem Set 2." Copy the file to your local machine (via GitHub Desktop). On your local file, add your name and the date to the top of the file, save your changes, and __push__ them to your GitHub.  
 
-You can also embed plots, for example:
+2. 
 
-```{r text, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

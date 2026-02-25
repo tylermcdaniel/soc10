@@ -1,0 +1,10 @@
+name: soc10
+title:
+username: tylermcdaniel
+account: tylermcdaniel
+server: connect.posit.cloud
+hostUrl: https://api.connect.posit.cloud/v1
+appId: 019c932f-6501-a8d5-bac5-df7f6ede5a76
+bundleId:
+url: https://connect.posit.cloud/tylermcdaniel/content/019c932f-6501-a8d5-bac5-df7f6ede5a76
+version: 1

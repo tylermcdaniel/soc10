@@ -2,20 +2,39 @@
 
 Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of ``big data." 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+__Readings:__
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+* [Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois's Data Portraits : Visualizing Black America.](https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147)
 
-```{r data}
-summary(cars)
-```
+* [Data Visualization: A Practical Introduction. 5: Show the Right Numbers.](https://socviz.co/lookatdata.html#groupfacettx)
 
-## Including Plots
+* [Data Visualization: A Practical Introduction. 6: Graph Tables, Add Labels, Make Notes.](https://socviz.co/lookatdata.html#workgeoms)
 
-You can also embed plots, for example:
+## Why Visualization?
 
-```{r vizualization, echo=FALSE}
-plot(pressure)
-```
+We look at data for a reason. A well-designed visualization can make it easy to see important patterns and trends that might not pop out in tables. Visualization is also a good way to explore our data, or to look for potential issues or mistakes. 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+W.E.B. Du Bois is credited with some of the most famous visualizations in the field of sociology. With researchers at Atlanta University, Du Bois communicated the state of Black Americans to the world at the 1906 Paris Exhibition through a series of graphs documenting racial the economic, social, and demogrpahic conditions of Black citizens. The purpose behind these plots made them impactful. But the artistic elements make them unforgettable.   
+
+
+## Class Exercise
+
+In this excercise, we are going to create our own visualizations using historical census data. In groups, answer the following: 
+
+1. What are three ways that you could display the data? Describe the benefits and drawbacks of each. 
+
+2. How will you display the data? What display elements will you add?
+
+3. Sketch your data visualization. Be creative!
+
+
+
+
+## Problem Set 3
+
+1. Returning to the historical census data, re-create one of the visualizations from your classmates [you can find them here](). (You won't be penalized for not being able to fully replicate a chart).
+
+2. What would you change in the visualization? Why? Modify and re-plot.
+
+
+
